@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootcamp Training Coverage</title>
+    <!-- Add Tailwind CSS directly here to prevent Flash of Unstyled Content -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <style>
       body {
         margin: 0;
@@ -12,35 +14,18 @@
         color: #3E2723; /* Dark Chocolate text */
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="./index.css">
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
-    <!-- Use relative paths so assets resolve correctly for project pages (e.g. /thx25/) -->
     <script type="module" src="./index.tsx"></script>
-
-    <!--
-      NOTE: This repository currently contains the TypeScript/TSX source (index.tsx).
-      Browsers cannot execute TSX directly. To make the site work on GitHub Pages you should:
-
-      1) Build the app with Vite (or your toolchain) so it emits plain JS (e.g. index.js / assets/*),
-         and then deploy the build output (dist/) to the branch/folder GitHub Pages serves.
-
-      2) Or commit a compiled bundle (index.js and index.css) alongside index.html and
-         update the script href here to point to the compiled bundle (example: ./index.js).
-
-      For immediate path fixes, this change makes asset requests relative (./) so they resolve
-      under https://poolodoo.github.io/thx25/. The larger step is to produce compiled JS from
-      index.tsx so the app can actually run in the browser.
-    -->
   </body>
 </html>
